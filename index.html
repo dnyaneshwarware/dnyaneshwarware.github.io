@@ -27,9 +27,15 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background: var(--gray); }
         header { background: var(--dark); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--rh-red); }
         .container { max-width: 900px; margin: auto; padding: 20px; }
-        .card { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid var(--rh-red); }
+        
+        /* Updated Card Styles */
+        .card { background: white; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid var(--rh-red); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        .card-link { text-decoration: none; color: inherit; display: block; padding: 25px; }
+        
         h1 { margin: 0; font-size: 2.5em; }
         h2 { color: var(--rh-red); border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        h3 { margin-top: 0; }
         .tag { background: #e0e0e0; padding: 5px 10px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; display: inline-block; margin-top: 10px; }
         .contact-btn { display: inline-block; background: var(--rh-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
         .contact-btn:hover { background: #cc0000; }
@@ -45,32 +51,49 @@
 
 <div class="container">
     <h2>Professional Summary</h2>
-    <p>Strategic and data-driven leader with 10 years at BNY Mellon. Expert in bridging the gap between complex engineering and marketing efficiency through automation and high-scale migrations.</p>
+    <p>Strategic and data-driven leader with 10 years at BNY. Expert in bridging the gap between complex engineering and marketing efficiency through automation and high-scale migrations.</p>
 
     <h2>Key Projects</h2>
     
     <div class="card">
-        <h3>GA4 Migration & Big Data Visualization</h3>
-        <p>Led the transition to Google Analytics 4, implementing complex cross-domain tracking and automated reporting dashboards for enterprise-level insights.</p>
-        <span class="tag">GA4</span> <span class="tag">BigQuery</span> <span class="tag">Data Strategy</span>
+        <a href="/projects/ua-to-ga4-migration.html" class="card-link">
+            <h3>GA4 Migration & Big Data Visualization</h3>
+            <p>Led the transition to Google Analytics 4, implementing complex cross-domain tracking and automated reporting dashboards for enterprise-level insights.</p>
+            <span class="tag">GA4</span> <span class="tag">BigQuery</span> <span class="tag">Data Strategy</span>
+        </a>
     </div>
 
     <div class="card">
-        <h3>Automated Fund Performance System</h3>
-        <p>Developed a custom TypeScript and Office 365 script solution, achieving 95%+ time savings and 100% data accuracy for quarterly financial reporting.</p>
-        <span class="tag">TypeScript</span> <span class="tag">Automation</span> <span class="tag">Office 365</span>
+        <a href="/projects/fund-csv-automation-script.html" class="card-link">
+            <h3>Automated Fund Performance System</h3>
+            <p>Developed a custom TypeScript and Office 365 script solution, achieving 95%+ time savings and 100% data accuracy for quarterly financial reporting.</p>
+            <span class="tag">TypeScript</span> <span class="tag">Automation</span> <span class="tag">Office 365</span>
+        </a>
     </div>
 
     <div class="card">
-        <h3>WordPress to Adobe AEM Migration</h3>
-        <p>Scalable content migration using WordPress APIs and Power Query, reducing content freeze periods by 75% across enterprise platforms.</p>
-        <span class="tag">CMS Migration</span> <span class="tag">AEM</span> <span class="tag">API Integration</span>
+        <a href="/projects/wordpress-aem-migration.html" class="card-link">
+            <h3>WordPress to Adobe AEM Migration</h3>
+            <p>Scalable content migration using WordPress APIs and Power Query, reducing content freeze periods by 75% across enterprise platforms.</p>
+            <span class="tag">CMS Migration</span> <span class="tag">AEM</span> <span class="tag">API Integration</span>
+        </a>
     </div>
 
     <div class="card">
-        <h3>Python AI Document Processing</h3>
-        <p>Built an intelligent Python tool to automate bulk PDF metadata updates using visual hierarchy logic, ensuring 100% brand compliance in regulated environments.</p>
-        <span class="tag">Python</span> <span class="tag">AI/ML Logic</span> <span class="tag">Automation</span>
+        <a href="/projects/python-pdf-automation.html" class="card-link">
+            <h3>Python AI Document Processing</h3>
+            <p>Built an intelligent Python tool to automate bulk PDF metadata updates using visual hierarchy logic, ensuring 100% brand compliance in regulated environments.</p>
+            <span class="tag">Python</span> <span class="tag">AI/ML Logic</span> <span class="tag">Automation</span>
+        </a>
+    </div>
+
+    <!-- Added 5th card for Pardot Migration -->
+    <div class="card">
+        <a href="/projects/pardot-template-migration.html" class="card-link">
+            <h3>Pardot Marketing Automation</h3>
+            <p>Strategic implementation of Pardot for lead nurturing and automated lifecycle marketing workflows.</p>
+            <span class="tag">Pardot</span> <span class="tag">Email Marketing</span> <span class="tag">B2B</span>
+        </a>
     </div>
 </div>
 

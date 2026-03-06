@@ -39,6 +39,13 @@
         .tag { background: #e0e0e0; padding: 5px 10px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; display: inline-block; margin-top: 10px; }
         .contact-btn { display: inline-block; background: var(--rh-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
         .contact-btn:hover { background: #cc0000; }
+
+
+/* This specifically removes the border for the contact card only */
+.card.no-border {
+    border-left: none !important;
+}
+
     </style>
 </head>
 <body>
@@ -97,8 +104,8 @@
     </div>
 
 <h2 id="contact">Get In Touch</h2>
-<div class="card">
-    <p>Have a question or a MarTech opportunity? Send me a message directly.</p>
+<div class="card no-border" >
+    <p style="margin-top:25px;">Have a question or a MarTech opportunity? Send me a message directly.</p>
     <!-- Replace 'your_unique_id' with the one from Formspree -->
     <form action="https://formspree.io/f/xkoqnbar" method="POST" id="contact-form">
         <div style="margin-bottom: 15px;">

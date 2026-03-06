@@ -95,6 +95,38 @@
             <span class="tag">Pardot</span> <span class="tag">Email Marketing</span> <span class="tag">B2B</span>
         </a>
     </div>
+
+<h2 id="contact">Get In Touch</h2>
+<div class="card">
+    <p>Have a question or a MarTech opportunity? Send me a message directly.</p>
+    <!-- Replace 'your_unique_id' with the one from Formspree -->
+    <form action="https://formspree.io/f/xkoqnbar" method="POST" id="contact-form">
+        <div style="margin-bottom: 15px;">
+            <label style="display:block; font-weight:bold;">Your Name</label>
+            <input type="text" name="name" required style="width:100%; padding:10px; border-radius:4px; border:1px solid #ccc; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display:block; font-weight:bold;">Your Email</label>
+            <input type="email" name="email" required style="width:100%; padding:10px; border-radius:4px; border:1px solid #ccc; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display:block; font-weight:bold;">Message</label>
+            <textarea name="message" rows="4" required style="width:100%; padding:10px; border-radius:4px; border:1px solid #ccc; box-sizing: border-box;"></textarea>
+        </div>
+        <button type="submit" class="contact-btn" style="border:none; cursor:pointer; width:100%;">Send Message</button>
+    </form>
+</div>
+
+<!-- Simple GA4 Event Tracking for Form Submission -->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function() {
+    gtag('event', 'form_submission', {
+      'event_category': 'contact',
+      'event_label': 'portfolio_inquiry'
+    });
+  });
+</script>
+
 </div>
 
 <footer style="text-align: center; padding: 40px; color: #888;">
